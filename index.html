@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Average Counter</title>
+</head>
+<body>
+    <input id="grades" placeholder="Оценки через пробел" type="text"> <div id="warn"></div> <br><br><br>
+    
+    <input id="hope" placeholder="Желаемая оценка" type="text">  <br><br><br>
+    
+    <input id="method" placeholder="Получаемые оценки" type="text"> <br><br><br>
+    
+    <input value="Рассчет желаемой оценки" id="click" type="submit">
+    <input value="Сбросить" type="submit" id="clear"> 
+    <dialog id="modal">
+        <p id="modal-text"></p>
+        <button id="modal-close">OK</button>
+    </dialog>
+    
+    <div id="output">Среднее: 
+    Четвертная:</div>
+    <div id="need"></div>
+    <script src="script.js"></script>
+</body>
+</html>
