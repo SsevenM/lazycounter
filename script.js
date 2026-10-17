@@ -71,7 +71,10 @@ function getList() {
        warn.textContent = "Введите через пробелы пожалуйста"
         output.textContent = ""
     }
-    else return list
+    else { 
+        return list
+        warn.textContent = ""
+    }
 }
 
 function getGrade(avg) {
@@ -85,6 +88,7 @@ grades.addEventListener("input", () => {
     const list = getList();
     if (list.length === 0) {
         output.textContent = ""
+        warn.textContent = ""
         return
     }
     const sum = list.reduce((a,b) => a + b, 0);
@@ -137,4 +141,32 @@ clear.addEventListener("click", () => {
     
     output.textContent = "Среднее: \n Четвертная: ";
     need.textContent = "";
+})
+
+grades.addEventListener("keydown", (e) => {
+    if(e.key === "Enter") {
+        hope.focus();
+    }
+})
+
+hope.addEventListener("keydown", (e) => {
+    if(e.key === "Enter") {
+        met.focus();
+    }
+})
+
+
+met.addEventListener("keydown", (e) => {
+    if(e.key === "Enter") {
+        button.click();
+    }
+})
+
+document.addEventListener("keydown", (e) => {
+    if(e.key === "Shift" & active === false) {
+        active = true
+    }
+    else if(e.key === "Shift" & active === true) {
+        active = false
+    }
 })
